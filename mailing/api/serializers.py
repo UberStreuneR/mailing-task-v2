@@ -13,7 +13,6 @@ class ClientSerializer(serializers.ModelSerializer):
         model = Client
         fields = '__all__'
         read_only_fields = ['mobile_operator']
-        # exclude = ['mobile_operator']
 
     def validate(self, attrs):
         phone_number = attrs['phone_number']
